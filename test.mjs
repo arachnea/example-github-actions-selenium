@@ -19,7 +19,7 @@ describe('search', async function () {
         await searchBox.sendKeys(term, Key.ENTER);
 
         // Wait until the result page is loaded
-        await driver.wait(until.elementLocated(By.css('#links .result')));
+        await driver.wait(until.elementLocated(By.css('.react-results--main')));
 
         // Return page content
         const body = await driver.findElement(By.tagName('body'));
